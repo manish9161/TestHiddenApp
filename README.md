@@ -1,5 +1,5 @@
 # TestHiddenApp
-This is an application for hide/show application icon on click on volume down button 3 times consecutively (600ms).
+This is an application must be hidden into the background in the initial loading state. When button "volume down" is pressed 3 times consecutively, it will toggle the visibility of the app.
 
 Assumtions
 Device should be with API level 21+.

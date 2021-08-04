@@ -34,6 +34,10 @@ class VolumeService : Service() {
         mediaSessionCompat?.setFlags(MediaSessionCompat.FLAG_HANDLES_MEDIA_BUTTONS or MediaSessionCompat.FLAG_HANDLES_TRANSPORT_CONTROLS)
         mediaSessionCompat?.setPlaybackState(PlaybackStateCompat.Builder().setState(PlaybackStateCompat.STATE_PLAYING, 0, 0f).build())
 
+        if(PrefsHelper.read(PrefsHelper.APP_ICON_STATUS, "") == "") {
+            hideAppIcon()
+        }
+
         val myVolumeProvider: VolumeProviderCompat = object : VolumeProviderCompat(VOLUME_CONTROL_RELATIVE, 100,  50) {
             override fun onAdjustVolume(direction: Int) {
                 if(direction == -1) {
@@ -42,7 +46,7 @@ class VolumeService : Service() {
                         resetClickCounterHandler()
                     }
                     if(clickCounter == 3) {
-                        if(PrefsHelper.read(PrefsHelper.APP_ICON_STATUS, "1") == "1") {
+                        if(PrefsHelper.read(PrefsHelper.APP_ICON_STATUS, "") == "1") {
                             hideAppIcon()
                         } else {
                             showAppIcon()
