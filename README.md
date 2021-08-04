@@ -6,6 +6,12 @@ Device should be with API level 21+.
 
 According to docs (https://developer.android.com/reference/android/content/pm/LauncherApps#getActivityList(java.lang.String,%20android.os.UserHandle), as of Android Q (API 29) all app icons will be visible in the launcher no matter what unless. Please refer official doc.
 
+Steps to run:
+
+1. Click on application icon
+2. It hides in initial launch
+3. To show app again (Click button "volume down" 3 times consecutively (in 600ms))
+
 
 
 
