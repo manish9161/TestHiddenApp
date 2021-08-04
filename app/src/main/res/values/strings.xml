@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HiddenTestApp</string>
+
+    <string name="hide">Hide</string>
+    <string name="show">Show</string>
+
+    <string name="message">Note: To hide/show app icon on volume button click 3 times consecutively (in 600 ms).</string>
+</resources>
